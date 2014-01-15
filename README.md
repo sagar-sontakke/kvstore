@@ -1,10 +1,12 @@
 -----------------
 Contents
+----------------
 1. Introduction
 2. How to use it?
 3. How to use test scripts?
 4. How does it works?
 5. References
+
 -----------------
 
 1. Introduction
@@ -15,13 +17,15 @@ Contents
 
 2. How to use it?
 
-	1. Run the server side program "tcpServer.go" in one terminal. It will start the service.
-	2. Open another terminal(client) and connect to the server. Here server can be a localhost or any other
-	   computer where the server program is running.
-	3. When the connection gets established, you can run the commands for store, retrieve, delete, display
-	   the key-value pairs.
-	4. For getting the help about the commands, use the command "help"
-	5. It supports following set of commands:
+	A. Run the server side program "tcpServer.go" in one terminal. It will start the service. Start server 
+	   using command "go run tcpServer.go" on terminal
+	B. Open another terminal(client) and connect to the server. Here server can be a localhost or any other
+	   computer where the server program is running. To connect, use command "telnet localhost 1201" or you
+	   can use the IP address of remote computer in stead of localhost. The port number 1201 must be the same
+	C. When the connection gets established, you can run the commands for store, retrieve, delete, display
+	   rename the key-value pairs
+	D. For getting the help about the commands, use the command "help"
+	E. It supports following set of commands:
 
 		a) set <key> <value> 			(set a new key)
 			- The set command can be used to set/add a new key-value pair
@@ -53,23 +57,32 @@ Contents
 		g) exit/quit/abort			(close the server)
 			- Closes the server (only to be used on server side)
 
-		g) help					(display this help)
+		h) help					(display this help)
 
-	6. The key and the value both must be a single word value without any spaces.
+	F. The key and the value both must be a single word value without any spaces.
 
 3. How to use test scripts?
 
-	- There are different bash test cases provided to test this assignment. These test files are
-	  present in the directory "test-cases"
-	- To run these tests follow following steps:
+	A) There are different bash test cases provided to test this assignment. These test files are
+	   present in the directory "test-cases"
+	   
+	B) To run these tests follow following steps:
 		a) Start the server
-		b) Start one or more clients
+		
+		b) Start one or more clients (as explained in section 2)
+		
 		c) From the test-cases directory run the bash scripts as "bash <scrip-name>"
-		d) The tests will check the basic functionality of this model.
-	- Run all the test script with a single go
-		- follow the steps above till (b)
-		- Run the bash script "run-all.sh"
-		- It will run all the test scripts in the test-cases directory and notify when the test completed.
+		
+		d) The tests will check the basic functionality of this model
+		
+	C) Run all the test script with a single go
+	
+		a) follow the steps above till (b)
+		
+		b) Run the bash script "run-all.sh"
+		
+		c) It will run all the test scripts in the test-cases directory and notify when the test completed
+		
 
 4. How does it works?
 
@@ -108,6 +121,9 @@ Contents
 5. References
 
 	a) Go online tutorial for Go language introduction (http://tour.golang.org/#1)
+	
 	b) E-book for connection concepts (Network programming with Go)
+	
 	c) Online Go portal for package help (http://golang.org/doc/effective_go.html)
+	
 	d) Instagram website for key-value idea (http://instagram-engineering.tumblr.com/post/12202313862/storing-hundreds-of-millions-of-simple-key-value-pairs)
