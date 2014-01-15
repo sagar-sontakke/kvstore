@@ -19,12 +19,16 @@ Contents
 
 	A. Run the server side program "tcpServer.go" in one terminal. It will start the service. Start server 
 	   using command "go run tcpServer.go" on terminal
+	   
 	B. Open another terminal(client) and connect to the server. Here server can be a localhost or any other
 	   computer where the server program is running. To connect, use command "telnet localhost 1201" or you
 	   can use the IP address of remote computer in stead of localhost. The port number 1201 must be the same
+	   
 	C. When the connection gets established, you can run the commands for store, retrieve, delete, display
 	   rename the key-value pairs
+	   
 	D. For getting the help about the commands, use the command "help"
+	
 	E. It supports following set of commands:
 
 		a) set <key> <value> 			(set a new key)
